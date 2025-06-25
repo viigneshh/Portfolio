@@ -1,0 +1,191 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.outerShell {
+  background-color: rgb(199, 215, 242);
+  font-family: system-ui, Avenir;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 140px; /* space between card & box */
+}
+
+/* Rotated heading card */
+.heading {
+  width: 250px;
+  height: 450px;
+  background-color: rgb(89, 138, 215);
+  padding: 30px;
+  border-radius: 20px;
+  transform: rotate(-10deg);
+  transition: transform 0.5s ease;
+  color: white;
+  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Rotated texts inside */
+.hii {
+  transform: rotate(10deg);
+  margin-left: 57px;
+}
+
+.pp {
+  transform: rotate(10deg);
+  margin-left: 50px;
+}
+
+.fitIt {
+  font-size: 20px;
+  width: 190px;
+  transform: rotate(10deg);
+  margin-left: 7px;
+  font-size: 55px;
+  line-height: 55px;
+  position: relative;
+  bottom: 30px;
+}
+
+/* Black container box */
+.container {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.orb1, .orb2, .orb3 {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.orb1 {
+  background-color: rgb(142, 184, 246);
+  animation: scaleit 10s linear infinite;
+ 
+}
+.orb2 {
+  background-color: rgb(142, 184, 246);
+  position: absolute;
+  top: 350px;
+  left:175px;
+  animation: scaleit 10s linear infinite;
+  
+}
+.orb3 {
+  background-color: rgb(197, 95, 251);
+  position: absolute;
+  left: 350px;
+  animation: scaleit 10s linear infinite;
+}
+
+
+
+/* Container for orbiting */
+.container {
+  width: 400px;
+  height: 400px;
+  position: relative; /* anchor point for orbiting children */
+  background-color: transparent;
+  left: 200px;
+  top:20px;
+}
+
+/* Orbit ring */
+.orbit1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateOrbit 10s linear infinite;
+  
+}
+.orbit2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ 
+
+  animation: rotateOrbit 10s linear infinite;
+  
+}
+.orbit3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ 
+
+  animation: rotateOrbit 10s linear infinite;
+  
+}
+@keyframes scaleit {
+  0%{ transform: scale(2);}
+  50%{transform: scale(1);}
+  100%{transform: scale(2);}
+}
+
+/* Orb itself */
+
+
+
+@keyframes rotateOrbit {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.container:hover .orbit1,.container:hover .orbit2,.container:hover .orbit3{
+  animation-play-state: paused;
+}
+.container:hover .orb1{
+  box-shadow: 0 0 20px rgb(142, 184, 246),0 0 40px rgb(142, 184, 246) ;
+}
+
+.container:hover .orb2{
+  box-shadow: 0 0 20px  rgb(180, 142, 246),0 0 40px  rgb(180, 142, 246) ;
+}
+
+.container:hover .orb3{
+  box-shadow: 0 0 20px rgb(197, 95, 251),0 0 40px rgb(197, 95, 251);
+}
+.button1{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+}
+
+.explode{
+  animation: exxplode 2s linear infinite;
+
+}
+@keyframes exxplode {
+  0%{transform: scale(1);}
+  100%{transform: scale(40);}
+}
+.transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(142, 184, 246); /* same as Home bg */
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.8s ease;
+}
+
+.transition-overlay.show {
+  opacity: 1;
+}
