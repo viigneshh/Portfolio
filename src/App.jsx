@@ -1,6 +1,6 @@
 //import Home from './pages/home'
 //import './App.css'
-import NavBar from "../components/navbar"
+import NavBar from "./components/navbar"
 import Aboutme from "./pages/about"
 import { Routes,Route } from "react-router-dom"
 import Home from "./pages/home"
