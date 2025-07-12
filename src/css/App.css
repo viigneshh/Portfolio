@@ -202,3 +202,26 @@ html, body {
 .fade{
  animation: fadeout 0.2s linear forwards;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  html, body, .outerShell, .contentWrapper, .heading, .fitIt1, .container, .orbit1, .orb1, .orb2, .orb3, .button1, .nav-bar, .nav-links, .nav-button, .desktop-orbs {
+    display: none !important;
+  }
+  body::before {
+    content: "Sorry, I'm working on taking this to mobiles. Please open it on your PC.";
+    display: block;
+    color: #333;
+    background: #f5f2fb;
+    font-size: 20px;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: system-ui, Avenir;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+  }
+}

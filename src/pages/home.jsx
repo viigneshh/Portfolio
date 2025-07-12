@@ -43,18 +43,17 @@ function Home() {
 
   return (
     <>
-
       <div className="outerShell">
         <div className="contentWrapper">
-           <NavBar/>
+          <NavBar/>
           <div className="heading">
             {/*<h2 className="hii">Hey there!</h2>
             <h3 className="pp">I am N Mani Naga Vignesh</h3>
             <h2 className='p1'>A passionate MERN stack Developer</h2>*/}
             <img src={con} alt='viggs' className='fitIt1' />
           </div>
-
-          <div className="container">
+          {/* Show orbs only on desktop/tablet */}
+          <div className="container desktop-orbs">
             <div className="orbit1">
               <div className={`orb2 ${explodeOrb === 'orb2' ? 'explode' : ''}`}>
                 <button className="button1" onClick={() => handleClick2('orb2')}><div className={`inner ${explodeOrb==='orb2'?'fade':''}`}>Contact Me</div></button>
@@ -69,7 +68,6 @@ function Home() {
           </div>
         </div>
       </div>
-
       {/* Smooth fade transition */}
       <div className={`transition-overlay ${fadeOut ? 'show' : ''}`}></div>
       <div className={`transition-overlay1 ${fadeOut1 ? 'show' : ''}`}></div>
