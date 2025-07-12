@@ -1,23 +1,56 @@
 import '../css/about.css';
 import meImage from '../image/me21.png';
+import reacct from '../image/react.png';
+import mysql from '../image/mysql.png';
+import python from '../image/python.png';
+import node from '../image/node.png';
+import web from '../image/pngegg.png';
+import web1 from '../image/pngegg1.png';
+import web2 from '../image/pngegg2.png';
+import mongo from '../image/mongo.png';
+import exp from '../image/express.png';
 
 function Aboutme() {
   return (
     <div>
       <div className="background">
-        <div className="lowback"></div>
+        <div className="lowback">
+          <div className="extra-block">
+            <h3 className="extra-heading">Technologies I Use</h3>
+            <div className="tech-grid">
+              <img src={reacct} alt="React" />
+              <img src={mysql} alt="MySQL" />
+              <img src={python} alt="Python" />
+              <img src={node} alt="Node.js" />
+              <img src={web} alt="Web" />
+              <img src={web1} alt="Web1" />
+              <img src={web2} alt="Web2" />
+              <img src={mongo} alt="MongoDB" />
+              <img src={exp} alt="Express" />
+            </div>
+          </div>
+        </div>
 
         <div className="contain">
           <h2>Hello, I'm Vignesh</h2>
           <p>
-            I'm currently pursuing a B.Tech in Electrical and Electronics Engineering at Amrita School of Engineering, Coimbatore.
-            I'm passionate about web development and love working with full-stack technologies.
+            I have completed my Bachelor of Technology (B.Tech) in Electrical and Electronics 
+            Engineering from Amrita School of Engineering, Coimbatore. Though my academic foundation
+             lies in core engineering disciplines, I discovered a deep interest in web development during
+              my college years. Over time, I have cultivated strong skills in full-stack development,
+               working across both frontend and backend technologies to build modern, responsive, and
+                user-centric applications. I'm passionate about creating meaningful digital experiences 
+                and continuously strive to stay updated with emerging tools and frameworks through 
+                hands-on practice, collaboration, and real-world project development
           </p>
 
-          <h4>Career Objective</h4>
+          
           <p>
-            To be part of an organization where I can fully utilize my skills and knowledge,
-            contributing meaningfully to its success while continuously growing as an individual.
+            My aim right now is to work in a dynamic and innovative environment where I can apply my skills in full-stack development 
+            to create impactful digital solutions. I aim to contribute to the growth and success of an organization 
+            while continuously evolving as a developer by embracing new technologies, collaborating with cross
+            -functional teams, and taking on challenging responsibilities that enhance both my technical and professional 
+            capabilities.
           </p>
 
           <h4>Education</h4>
@@ -27,13 +60,7 @@ function Aboutme() {
             <li>10th – Bhashyam High School, Guntur – 9.8 GPA</li>
           </ul>
 
-          <h4>Technical Skills</h4>
-          <ul>
-            <li>Frontend: HTML, CSS, JavaScript, React.js</li>
-            <li>Backend: Node.js, Express.js</li>
-            <li>Database: MySQL, MongoDB</li>
-            <li>Other: Git, Python</li>
-          </ul>
+         
         </div>
 
         <div className="contain1">

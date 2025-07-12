@@ -8,7 +8,7 @@
   }
   100% {
     
-    opacity: 0.5;
+    opacity: 0.7;
   }
 }
 
@@ -17,14 +17,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 998;
   background: transparent;
   font-family: system-ui;
   padding: 20px 30px;
   box-sizing: border-box;
   display: flex;
   justify-content: flex-end;
-  animation: slideDown 10s ease-out forwards;
+  animation: slideDown 10s ease-out forwards ;
 }
 
 .nav-links {
@@ -49,7 +49,7 @@
 
 /* Color modifiers */
 .nav-button.blue {
-  background-color: rgb(65, 105, 165);
+  background-color: #f5f2fb;
 }
 
 .nav-button.light-blue {
@@ -57,5 +57,8 @@
 }
 
 .nav-button.purple {
-  background-color: rgb(197, 95, 251);
+  background-color: rgb(145, 169, 200);
+}
+.nav-button.home{
+  background-color: rgb(199, 215, 242);
 }

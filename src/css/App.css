@@ -15,10 +15,9 @@ html, body {
 
 .contentWrapper {
   display: flex;
-  gap: 140px; /* space between card & box */
+  gap: 140px;
 }
 
-/* Rotated heading card */
 .heading {
   width: 250px;
   height: 450px;
@@ -31,148 +30,175 @@ html, body {
   margin-left: 250px;
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
-/* Rotated texts inside */
 .hii {
   transform: rotate(10deg);
-  margin-left: 57px;
+  margin-left: 77px;
 }
 
 .pp {
   transform: rotate(10deg);
-  margin-left: 50px;
+  margin-left: 40px;
+  
+}
+.p1 {
+  transform: rotate(10deg);
+  margin-left: 40px;
+  
 }
 
 .fitIt1 {
-  
-  width: 250px;
+  width: 320px;
+  height: 350px;
   transform: rotate(10deg);
-  right: 20px;
+  right: 40px;
   font-size: 55px;
   line-height: 55px;
   position: relative;
-  top: 10px;
+  top: 30px;
+  color: #f5f2fb;
 }
 
-/* Black container box */
-.container {
-  width: 200px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.orb1, .orb2, .orb3 {
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-}
-
-.orb1 {
-  background-color: rgb(142, 184, 246);
-  animation: scaleit 7s linear infinite;
- 
-}
-.orb2 {
-  background-color: rgb(65, 105, 165);
-  position: absolute;
-  top: 350px;
-  left:175px;
-  animation: scaleit 7s linear infinite;
-  
-}
-.orb3 {
-  background-color: rgb(164, 128, 221);
-  position: absolute;
-  left: 350px;
-  animation: scaleit 7s linear infinite;
-}
-
-
-
-/* Container for orbiting */
+/* Orb Container */
 .container {
   width: 400px;
   height: 400px;
-  position: relative; /* anchor point for orbiting children */
+  position: relative;
   background-color: transparent;
-  left: 200px;
-  top:20px;
+  left: 190px;
+  top: 40px;
+  
 }
 
-/* Orbit ring */
+/* Orbit Animation */
 .orbit1 {
   position: absolute;
   width: 100%;
   height: 100%;
+  animation: rotateOrbit 15s linear infinite;
 
   
-
- 
-
-  animation: rotateOrbit 7s linear infinite;
-  
-}
-@keyframes scaleit {
-  0%{ transform: scale(2.5);}
-  50%{transform: scale(1.5);}
-  100%{transform: scale(2.5);}
 }
 
-/* Orb itself */
-
-
-
-@keyframes rotateOrbit {
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-.container:hover .orbit1,.container:hover .orbit2,.container:hover .orbit3{
-  animation-play-state: paused;
-}
-.container:hover .orb1{
-  box-shadow: 0 0 10px rgb(142, 184, 246) ;
+/* Orb Styles */
+.orb1, .orb2, .orb3 {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size:50px ;
 }
 
-.container:hover .orb2{
-  box-shadow: 0 0 10px rgb(65, 105, 165);
+.orb1 {
+  background-color: rgb(142, 184, 246);
+  animation: scaleit 15s linear infinite;
+  position: absolute;
+  top: 90%;
+
+  transform: translate(-50%, -50%);
 }
 
-.container:hover .orb3{
-  box-shadow: 0 0 10px rgb(164, 128, 221);
+.orb2 {
+  background-color: rgb(145, 169, 200);
+  position: absolute;
+  top: 45%;
+  left: 80%;
+  animation: scaleit 15s linear infinite;
 }
-.button1{
+
+.orb3 {
+  background-color: #f5f2fb;
+  position: absolute;
+
+  animation: scaleit 15s linear infinite;
+}
+
+.button1 {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   background-color: transparent;
   border: none;
   position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
 }
 
-.explode{
-  animation: exxplode 2s linear infinite;
-
+/* Hover Effects */
+.container:hover .orbit1 {
+  animation-play-state: paused;
 }
+.container:hover .orb1 {
+  box-shadow: 0 0 10px rgb(142, 184, 246);
+}
+.container:hover .orb2 {
+  box-shadow: 0 0 10px rgb(65, 105, 165);
+}
+.container:hover .orb3 {
+  box-shadow: 0 0 10px rgb(164, 128, 221);
+}
+
+/* Explosion Animation */
+.explode {
+  animation: exxplode 2s linear forwards;
+  z-index: 9999;
+}
+
 @keyframes exxplode {
-  0%{transform: scale(1);}
-  100%{transform: scale(50);}
+  0% { transform: scale(1); }
+  100% { transform: scale(50); }
 }
+
+@keyframes scaleit {
+  0% { transform: scale(2.75); }
+  50% { transform: scale(2); }
+  100% { transform: scale(2.75); }
+}
+
+@keyframes rotateOrbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes fadeout{
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}
+
+/* Overlay for Page Transition */
 .transition-overlay {
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(142, 184, 246); /* same as Home bg */
+  background-color: rgb(142, 184, 246);
   opacity: 0;
   pointer-events: none;
   z-index: 9999;
   transition: opacity 0.8s ease;
+
 }
+.transition-overlay1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.8s ease;}
 
 .transition-overlay.show {
   opacity: 1;
+}
+.inner{
+  color:antiquewhite;
+  font-size: 10px;
+}
+
+.fade{
+ animation: fadeout 0.2s linear forwards;
 }
