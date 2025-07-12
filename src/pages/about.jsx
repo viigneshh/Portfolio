@@ -1,5 +1,5 @@
 import '../css/about.css';
-import meImage from '../image/me21.png';
+import meImage from '../image/me21.PNG';
 import reacct from '../image/react.png';
 import mysql from '../image/mysql.png';
 import python from '../image/python.png';
