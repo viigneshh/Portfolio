@@ -227,13 +227,4 @@ html, body {
 }
 
 /* Optional: Scrollbar Theme */
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background: rgb(121, 142, 235);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-track {
-  background: rgb(220, 235, 255);
-}
+

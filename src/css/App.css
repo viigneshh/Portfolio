@@ -44,10 +44,10 @@ html, body {
 }
 .image1{
   position: absolute;
-  top: 200px;
+  top: -100px;
   left: -140px;
   scale:0.5;
-  transform: scaleX(-1);
+  
   rotate: 40deg;
 }
 
