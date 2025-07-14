@@ -1,10 +1,27 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import '../css/App.css';
 import con from '../image/cont2.png';
 import NavBar from '../components/navbar';
+import pic from '../image/pic.png';
+import tree from '../image/small.png';
 
 function Home() {
+    const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === '/') {
+      // Block vertical scroll for Home
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      // Reset overflow when leaving Home
+      document.body.style.overflow = 'auto';
+    };
+  }, [location.pathname]);
   const [explodeOrb, setExplodeOrb] = useState(''); // '', 'orb1', 'orb2', 'orb3'
   const [fadeOut, setFadeOut] = useState(false);
    const [fadeOut1, setFadeOut1] = useState(false);
@@ -46,6 +63,9 @@ function Home() {
       <div className="outerShell">
         <div className="contentWrapper">
           <NavBar/>
+          <div className="image"><img src={pic}/></div>
+          <div className="image1"><img src={tree}/></div>
+          
           <div className="heading">
             {/*<h2 className="hii">Hey there!</h2>
             <h3 className="pp">I am N Mani Naga Vignesh</h3>

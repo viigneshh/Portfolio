@@ -2,6 +2,9 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;   /* ✅ Prevent horizontal scroll */
+  overflow-y: auto;   /* ✅ Optional: remove vertical scroll if needed */
+
 }
 
 .outerShell {
@@ -21,37 +24,38 @@ html, body {
 .heading {
   width: 250px;
   height: 450px;
-  background-color: rgb(89, 138, 215);
+  background-color: rgb(118, 153, 226);
   padding: 30px;
   border-radius: 20px;
-  transform: rotate(-10deg);
+  position: relative;
+  top: -20px;
   transition: transform 0.5s ease;
   color: white;
-  margin-left: 250px;
+
   display: flex;
   flex-direction: column;
 }
-
-.hii {
-  transform: rotate(10deg);
-  margin-left: 77px;
+.image{
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  scale:0.8;
+  transform: scaleX(-1);
+}
+.image1{
+  position: absolute;
+  top: 200px;
+  left: -140px;
+  scale:0.5;
+  transform: scaleX(-1);
+  rotate: 40deg;
 }
 
-.pp {
-  transform: rotate(10deg);
-  margin-left: 40px;
-  
-}
-.p1 {
-  transform: rotate(10deg);
-  margin-left: 40px;
-  
-}
 
 .fitIt1 {
   width: 320px;
   height: 350px;
-  transform: rotate(10deg);
+ 
   right: 40px;
   font-size: 55px;
   line-height: 55px;
@@ -152,7 +156,7 @@ html, body {
 
 @keyframes scaleit {
   0% { transform: scale(2.75); }
-  50% { transform: scale(2); }
+  50% { transform: scale(2.3); }
   100% { transform: scale(2.75); }
 }
 
@@ -195,7 +199,7 @@ html, body {
   opacity: 1;
 }
 .inner{
-  color:antiquewhite;
+  color:rgb(144, 149, 193);
   font-size: 10px;
 }
 
@@ -203,25 +207,68 @@ html, body {
  animation: fadeout 0.2s linear forwards;
 }
 
-/* Responsive Styles */
+/* Hide orbs and center content on mobile */
 @media (max-width: 768px) {
-  html, body, .outerShell, .contentWrapper, .heading, .fitIt1, .container, .orbit1, .orb1, .orb2, .orb3, .button1, .nav-bar, .nav-links, .nav-button, .desktop-orbs {
-    display: none !important;
-  }
-  body::before {
-    content: "Sorry, I'm working on taking this to mobiles. Please open it on your PC.";
-    display: block;
-    color: #333;
-    background: #f5f2fb;
-    font-size: 20px;
-    text-align: center;
+  .outerShell {
+    justify-content: center;
     padding: 40px 20px;
-    font-family: system-ui, Avenir;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 99999;
+    overflow-y: none; /* ✅ Prevent vertical scroll on mobile */
+  }
+  .contentWrapper{
+    overflow-y: none;
+  }
+
+
+  .container.desktop-orbs {
+    display: none; /* ✅ Hide orbs */
+  }
+  .heading{
+    margin-left: -10px;
+  }
+ 
+}
+
+
+@media (min-width: 769px) {
+  .heading {
+    margin-left: 250px;
   }
 }
+@media (max-width: 434px) {
+  .heading {
+    scale:0.8;
+    animation: comein 0.8s linear ;
+    margin-bottom: 30%;
+
+   
+  }
+  .image{
+    bottom: -100px;
+    left: 260px;
+    scale: 0.5;
+    z-index: 9999;
+  }
+  @keyframes comein {
+    0% { transform: translateX(400px); }
+    100% { transform:  translateX(0px); }
+  }
+  .image1{
+    top: -50px;
+    right: 180px;
+    scale: 0.2;
+    z-index: 9999;
+  }
+
+}
+@media (min-width: 434px) {
+  
+  .heading{
+    transform: rotate(-10deg);
+  }
+  .fitIt1{
+     transform: rotate(10deg);
+  }
+  
+
+}
+

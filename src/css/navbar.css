@@ -1,37 +1,27 @@
 /* NavBar.css */
 
-/* Slide-in animation */
-@keyframes slideDown {
-  0% {
-    
-    opacity: 0;
-  }
-  100% {
-    
-    opacity: 0.7;
-  }
-}
-
+/* Base nav-bar style */
 .nav-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 998;
-  background: transparent;
-  font-family: system-ui;
   padding: 20px 30px;
   box-sizing: border-box;
+  font-family: system-ui;
   display: flex;
   justify-content: flex-end;
-  animation: slideDown 10s ease-out forwards ;
+  background-color: transparent;
 }
 
+/* Navigation links */
 .nav-links {
   display: flex;
   gap: 15px;
 }
 
+/* Nav buttons */
 .nav-button {
   text-decoration: none;
   padding: 10px 20px;
@@ -51,14 +41,48 @@
 .nav-button.blue {
   background-color: #f5f2fb;
 }
-
 .nav-button.light-blue {
   background-color: rgb(142, 184, 246);
 }
-
 .nav-button.purple {
   background-color: rgb(145, 169, 200);
 }
-.nav-button.home{
+.nav-button.home {
   background-color: rgb(199, 215, 242);
+}
+
+/* -------- RESPONSIVE & PAGE-SPECIFIC BEHAVIOR -------- */
+
+/* On desktop: Hide on home, show on others */
+@media (min-width: 769px) {
+  .nav-bar.hide-on-desktop {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav-bar.show-on-desktop {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* On mobile: always show nav, no animation */
+@media (max-width: 768px) {
+  .nav-bar {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    background-color: transparent ;
+    justify-content: center;
+    padding: 15px 10px;
+  }
+
+  .nav-links {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .nav-button {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
 }
