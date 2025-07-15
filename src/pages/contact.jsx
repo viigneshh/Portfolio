@@ -12,7 +12,7 @@ function Contact() {
             <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" className="icon" />
             <h2 className="title">GitHub</h2>
             <p className="description">Check out my projects and repositories.</p>
-            <a href="https://github.com/yourhandle" target="_blank" rel="noopener noreferrer" className="link">Visit</a>
+            <a href="https://github.com/viigneshh" target="_blank" rel="noopener noreferrer" className="link">Visit</a>
           </div>
 
           {/* LinkedIn */}
@@ -20,7 +20,7 @@ function Contact() {
             <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" className="icon" />
             <h2 className="title">LinkedIn</h2>
             <p className="description">Connect with me professionally.</p>
-            <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener noreferrer" className="link">Visit</a>
+            <a href="https://linkedin.com/in/mani-naga-vignesh-nagabhyru-022109237" target="_blank" rel="noopener noreferrer" className="link">Visit</a>
           </div>
 
           {/* Instagram */}
@@ -28,7 +28,7 @@ function Contact() {
             <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" className="icon" />
             <h2 className="title">Instagram</h2>
             <p className="description">Follow me for design inspirations and stories.</p>
-            <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" className="link">Visit</a>
+            <a href="https://instagram.com/vignes._._.h" target="_blank" rel="noopener noreferrer" className="link">Visit</a>
           </div>
 
           {/* Email */}
@@ -36,7 +36,7 @@ function Contact() {
             <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" className="icon" />
             <h2 className="title">Email</h2>
             <p className="description">Send me a message anytime.</p>
-            <a href="mailto:your.email@example.com" className="link">Send Email</a>
+            <p className="email">maninagavignesh@gmail.com</p>
           </div>
         </div>
       </div>
