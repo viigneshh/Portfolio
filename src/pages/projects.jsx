@@ -21,8 +21,8 @@ function Projects() {
               <li>Full JWT auth, protected routes, and MySQL DB design</li>
             </ul>
             <div className="links">
-              <a href="https://coloQ.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
-              <a href="https://github.com/yourhandle/coloQ" target="_blank" rel="noopener noreferrer">GitHub</a>
+              
+              <a href="https://github.com/viigneshh" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
 
@@ -38,10 +38,7 @@ function Projects() {
               <li>Live desktop, tablet, mobile previews</li>
               <li>Section reordering and styling controls</li>
             </ul>
-            <div className="links">
-              <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
-              <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div>
+           
           </div>
 
           {/* 🎧 MongoDB-Based Project */}
@@ -56,10 +53,7 @@ function Projects() {
               <li>MongoDB for track and playlist storage</li>
               <li>Responsive interface with play controls</li>
             </ul>
-            <div className="links">
-              <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
-              <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div>
+           
           </div>
         </div>
       </div>
