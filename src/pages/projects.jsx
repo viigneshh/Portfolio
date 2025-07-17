@@ -27,19 +27,25 @@ function Projects() {
           </div>
 
           {/* 🛠️ Ongoing: Portfolio Website Builder */}
-          <div className="project-card animate">
-            <h2 className="title">Portfolio Website Builder</h2>
-            <p className="tags">React • CSS Modules • Responsive Design</p>
-            <p className="description">
-              A customizable portfolio website builder with multiple layout templates, drag-and-drop sections, and live responsive previews. Currently integrating advanced publish and export functionality.
-            </p>
-            <ul className="features">
-              <li>Drag-and-drop UI with theme customization</li>
-              <li>Live desktop, tablet, mobile previews</li>
-              <li>Section reordering and styling controls</li>
-            </ul>
-           
-          </div>
+                  <div className="project-card animate">
+          <h2 className="title">Swiggy Clone</h2>
+          <p className="tags">React • Vite • Tailwind CSS • Redux</p>
+          <p className="description">
+            A full-featured Swiggy clone built with React and Vite, showcasing real-time food ordering UI, dynamic menus, and cart management using Redux Toolkit. Built for performance with modern state management and Tailwind-based styling.
+          </p>
+          <ul className="features">
+            <li>Live restaurant menu with category filtering</li>
+            <li>Cart with add/remove and total calculation using Redux</li>
+            <li>Responsive layout with modern Tailwind UI</li>
+            <li>Dynamic routing with React Router v6</li>
+            <li>Optimized component structure for scalability</li>
+          </ul>
+          <div className="links">
+              
+              <a href="https://github.com/viigneshh/Clone_FoodApp" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+
 
           {/* 🎧 MongoDB-Based Project */}
           <div className="project-card animate">
