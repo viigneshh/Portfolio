@@ -39,7 +39,7 @@ function Aboutme() {
             <div className="about-section">
               <h4>Education</h4>
               <ul>
-                <li>B.Tech EEE – Amrita University – 6.79 GPA (Ongoing)</li>
+                <li>B.Tech EEE – Amrita University – 6.79 GPA </li>
                 <li>12th – Bhashyam Junior College, Gorantla – 92.2%</li>
                 <li>10th – Bhashyam High School, Guntur – 9.8 GPA</li>
               </ul>
