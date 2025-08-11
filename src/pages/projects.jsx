@@ -22,7 +22,7 @@ function Projects() {
             </ul>
             <div className="links">
               
-              <a href="https://github.com/viigneshh" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://github.com/viigneshh/FullStackApp" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
 
